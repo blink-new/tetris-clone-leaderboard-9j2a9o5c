@@ -11,7 +11,7 @@ import { blink } from './blink/client'
 function App() {
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(true)
-  const { gameState, startGame, pauseGame, resumeGame, movePiece, rotatePiece } = useGame()
+  const { gameState, startGame, pauseGame, resumeGame, movePiece, rotatePiece, hardDrop } = useGame()
   
   useEffect(() => {
     const unsubscribe = blink.auth.onAuthStateChanged((state) => {
